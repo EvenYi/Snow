@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Snow\Log.h" />
     <ClInclude Include="src\Snow\Application.h" />
     <ClInclude Include="src\Snow\Core.h" />
     <ClInclude Include="src\Snow\EntryPoint.h" />
     <ClInclude Include="src\Snow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Snow\Log.cpp" />
     <ClCompile Include="src\Snow\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -68,8 +70,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SNOW_PLATFORM_WINDOWS;SNOW_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Snow\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
